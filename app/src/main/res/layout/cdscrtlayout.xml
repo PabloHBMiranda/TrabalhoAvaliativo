@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/CDSCRTLYed1"
+        android:layout_width="54dp"
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+        android:layout_height="wrap_content"
+        android:hint=""
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="180dp"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/CDSCRTLYed2"
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+        android:layout_width="54dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="180dp"
+        android:hint=""
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/CDSCRTLYed3"
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+        android:layout_width="54dp"
+        android:layout_height="wrap_content"
+        android:hint=""
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="180dp"
+        android:textSize="20dp" />
+    <EditText
+        android:id="@+id/CDSCRTLYed4"
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+        android:layout_width="54dp"
+        android:layout_height="wrap_content"
+        android:hint=""
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="180dp"
+        android:textSize="20dp" />
+
+</LinearLayout>

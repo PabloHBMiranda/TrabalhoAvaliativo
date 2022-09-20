@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InversorDePalavras">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="INVERSOR DE PALAVRAS"
+        android:fontFamily="@font/freeshipping"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:textSize="30dp"
+        />
+    <EditText
+        android:id="@+id/IDPed1"
+        android:layout_width="266dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        android:hint="Digite:"
+        android:textSize="25dp" />
+
+    <Button
+        android:id="@+id/IDPbtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:text="INVERTER"
+        android:textSize="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/IDPed1"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/freeshipping"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="SARVALAP ED ROSREVNI"
+        android:fontFamily="@font/freeshipping"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="600dp"
+        android:textSize="30dp"
+        />
+</RelativeLayout>
