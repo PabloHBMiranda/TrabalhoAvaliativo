@@ -19,6 +19,13 @@ import java.util.Random;
 
 public class CodigoSecreto extends AppCompatActivity {
 
+    public int Alt(int x ,Random r){
+        int aux = x;
+        while(x == aux){
+            aux = r.nextInt(26);
+        }
+        return aux;
+    }
     public String SetarTexto(String l, String x1, String x2, String x3, String x4, int i,TextView txt, EditText edt){
         txt.setText(l);
         if(l.equals(x1)||l.equals(x2)||l.equals(x3)||l.equals(x4)){
@@ -81,6 +88,9 @@ public class CodigoSecreto extends AppCompatActivity {
     ListView CDSCRTlist1;
     List<String> lista;
     ArrayAdapter adapter;
+    String x1="A",x2="B",x3="C",x4="D";
+    String ED1, ED2, ED3, ED4;
+    Random r = new Random();
     int k = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,45 +114,43 @@ public class CodigoSecreto extends AppCompatActivity {
 
         String letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         Random r = new Random();
-        String x1="A",x2="B",x3="C",x4="D";
         //TextView texto;
         //texto.setTextColor(Color.);
-       /* int x = r.nextInt(26);
-        x1 = letras.charAt(x);
-        x = r.nextInt(26);
-        x2 = letras.charAt(x);
-        x = r.nextInt(26);
-        x3 = letras.charAt(x);
-        x = r.nextInt(26);
-        x4 = letras.charAt(x);*/
+        /*int x = r.nextInt(26);
+        x1 = String.valueOf(letras.charAt(x));
+        x = Alt(x,r);
+        x2 = String.valueOf(letras.charAt(x));
+        x = Alt(x,r);
+        x3 = String.valueOf(letras.charAt(x));
+        x = Alt(x,r);
+        x4 = String.valueOf(letras.charAt(x));*/
+
        CDSCRTbtn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(!CDSCRTLYed1.getText().toString().isEmpty() && !CDSCRTLYed2.getText().toString().isEmpty() && !CDSCRTLYed3.getText().toString().isEmpty()
                 && !CDSCRTLYed4.getText().toString().isEmpty()){
-                    String ED1, ED2, ED3, ED4;
                     ED1 = CDSCRTLYed1.getText().toString().toUpperCase();
                     ED2 = CDSCRTLYed2.getText().toString().toUpperCase();
                     ED3 = CDSCRTLYed3.getText().toString().toUpperCase();
                     ED4 = CDSCRTLYed4.getText().toString().toUpperCase();
-                    if(x1 == ED1 && x2 == ED2 && x3 == ED3 && x4 == ED4){
+                    k++;
+                    if(x1.equals(ED1) && x2.equals(ED2) && x3.equals(ED3) && x4.equals(ED4)){
                         Intent i = new Intent(CodigoSecreto.this,CodigoSecreto2.class);
-                        i.putExtra("TENTATIVAS",i);
+                        i.putExtra("TENTATIVAS",k);
                         startActivity(i);
                         finish();
                     }
-                    else{
-                        ED1 = SetarTexto(ED1,x1, x2,x3,x4,0,CDSCRTL2txt1, CDSCRTLYed1);
-                        ED2 = SetarTexto(ED2,x1, x2,x3,x4,1,CDSCRTL2txt2, CDSCRTLYed2);
-                        ED3 = SetarTexto(ED3,x1, x2,x3,x4,2,CDSCRTL2txt3, CDSCRTLYed3);
-                        ED4 = SetarTexto(ED4,x1, x2,x3,x4,3,CDSCRTL2txt4, CDSCRTLYed4);
-                        String textoF = k + "° TENTATIVA: " + ED1+ED2+ED3+ED4;
+                    else {
+                        ED1 = SetarTexto(ED1, x1, x2, x3, x4, 0, CDSCRTL2txt1, CDSCRTLYed1);
+                        ED2 = SetarTexto(ED2, x1, x2, x3, x4, 1, CDSCRTL2txt2, CDSCRTLYed2);
+                        ED3 = SetarTexto(ED3, x1, x2, x3, x4, 2, CDSCRTL2txt3, CDSCRTLYed3);
+                        ED4 = SetarTexto(ED4, x1, x2, x3, x4, 3, CDSCRTL2txt4, CDSCRTLYed4);
+                        String textoF = k + "° TENTATIVA: " + ED1 + ED2 + ED3 + ED4;
                         lista.add(textoF);
                         adapter.notifyDataSetChanged();
                         CDSCRTtxt1.setText("TENTATIVAS: " + k);
-                        k++;
                     }
-
                 }
                 else{
                     Toast.makeText(CodigoSecreto.this, "Preencha todos os campos", Toast.LENGTH_LONG).show();
