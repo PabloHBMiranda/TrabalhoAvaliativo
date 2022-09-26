@@ -30,7 +30,7 @@
         android:id="@+id/PPT2txt1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="VERSUS"
+        android:text=""
         android:layout_marginTop="20dp"
         android:textSize="50dp"
         android:fontFamily="@font/freeshipping"

@@ -116,14 +116,14 @@ public class CodigoSecreto extends AppCompatActivity {
         Random r = new Random();
         //TextView texto;
         //texto.setTextColor(Color.);
-        /*int x = r.nextInt(26);
+        int x = r.nextInt(26);
         x1 = String.valueOf(letras.charAt(x));
         x = Alt(x,r);
         x2 = String.valueOf(letras.charAt(x));
         x = Alt(x,r);
         x3 = String.valueOf(letras.charAt(x));
         x = Alt(x,r);
-        x4 = String.valueOf(letras.charAt(x));*/
+        x4 = String.valueOf(letras.charAt(x));
 
        CDSCRTbtn2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -137,7 +137,9 @@ public class CodigoSecreto extends AppCompatActivity {
                     k++;
                     if(x1.equals(ED1) && x2.equals(ED2) && x3.equals(ED3) && x4.equals(ED4)){
                         Intent i = new Intent(CodigoSecreto.this,CodigoSecreto2.class);
+                        String palavra = x1+x2+x3+x4;
                         i.putExtra("TENTATIVAS",k);
+                        i.putExtra("PALAVRA", palavra);
                         startActivity(i);
                         finish();
                     }
