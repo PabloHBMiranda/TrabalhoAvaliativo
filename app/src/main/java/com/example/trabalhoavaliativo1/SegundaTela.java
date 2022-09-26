@@ -42,5 +42,14 @@ public class SegundaTela extends AppCompatActivity {
                 finish();
             }
         });
+
+        T2btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(SegundaTela.this, Rand.class);
+                startActivity(i);
+                finish();
+            }
+        });
     }
 }

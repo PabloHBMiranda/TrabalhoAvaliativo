@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Rand">
+
+    <TextView
+        android:id="@+id/randtxt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RANDOMIZADOR DE PALAVRAS/VALORES"
+        android:fontFamily="@font/freeshipping"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        />
+    <TextView
+        android:id="@+id/randtxt2"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/freeshipping"
+        android:textColor="@color/black"
+        android:layout_below="@id/randtxt1"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="INSIRA QUANTOS TEXTOS QUISER. \nE AO FINAL, UM SERÁ SORTEADO"
+        />
+
+    <EditText
+        android:id="@+id/randed1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="D I G I T E:"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/randtxt2"
+        />
+    <Button
+        android:id="@+id/randbtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/randed1"
+        android:backgroundTint="@color/black"
+        android:layout_marginTop="10dp"
+        android:text="INSERIR"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/freeshipping"
+        />
+
+    <ListView
+        android:id="@+id/randlist1"
+        android:layout_width="wrap_content"
+        android:layout_height="243dp"
+        android:layout_below="@id/randbtn1"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="10dp" />
+    <TextView
+        android:id="@+id/randtxt3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/randlist1"
+        android:layout_marginTop="10dp"
+        android:textSize="25dp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:text="\????"
+        />
+    <LinearLayout
+        android:id="@+id/randly1"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/randtxt3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/randbtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:text="LIMPAR"
+            android:fontFamily="@font/freeshipping"
+            android:textSize="19dp"
+            android:layout_marginHorizontal="5dp"
+            />
+        <Button
+            android:id="@+id/randbtn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SORTEAR"
+            android:textSize="19dp"
+            android:backgroundTint="@color/black"
+            android:fontFamily="@font/freeshipping"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/randtn4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:text="MENU PRINCIPAL"
+        android:fontFamily="@font/freeshipping"
+        android:textSize="20dp"
+        android:layout_below="@+id/randly1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        />
+</RelativeLayout>
