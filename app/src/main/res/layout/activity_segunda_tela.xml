@@ -7,8 +7,20 @@
     tools:context=".SegundaTela">
 
     <include
+        android:id="@+id/la1"
         layout="@layout/botoes_alng"
         android:layout_width="358dp"
         android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/fechar"
+        android:layout_below="@+id/la1"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="115dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/black"
+        android:text="FECHAR"
+        android:textSize="20dp"
+        android:fontFamily="@font/freeshipping"/>
 
 </RelativeLayout>

@@ -39,6 +39,7 @@
         android:textSize="20dp"
         android:layout_marginTop="10dp"
         android:layout_below="@id/randtxt2"
+        android:inputType="text"
         />
     <Button
         android:id="@+id/randbtn1"

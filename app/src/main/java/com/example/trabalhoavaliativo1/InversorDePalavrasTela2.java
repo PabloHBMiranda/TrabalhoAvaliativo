@@ -21,9 +21,10 @@ public class InversorDePalavrasTela2 extends AppCompatActivity {
         Intent receberDados = getIntent();
         String palavra = receberDados.getStringExtra("texto");
         String resultado = "";
-        for(int x = palavra.length() -1;x>=0;x--){
+        for(int x = palavra.length() -1;x>=0;x--) {
             resultado = resultado + palavra.charAt(x);
         }
+//        IDP2ed1.clickable = true;
         IDP2ed1.setText(resultado);
 
         IDP2btn1.setOnClickListener(new View.OnClickListener() {

@@ -19,6 +19,7 @@
     <EditText
         android:id="@+id/IDPed1"
         android:layout_width="266dp"
+        android:inputType="text"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="250dp"
