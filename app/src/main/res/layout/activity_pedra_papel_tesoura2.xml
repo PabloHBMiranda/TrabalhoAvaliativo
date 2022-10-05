@@ -6,79 +6,55 @@
     android:layout_height="match_parent"
     tools:context=".PedraPapelTesoura2">
 
-    <TextView
-        android:id="@+id/PPT2txt2"
+    <LinearLayout
+        android:id="@+id/p2"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="VOCÊ: "
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="90dp"
-        android:textSize="30dp"
-        android:textColor="@color/black"
-        android:fontFamily="@font/freeshipping"
-        />
-    <ImageView
-        android:id="@+id/PPT2img1"
-        android:layout_width="166dp"
-        android:layout_height="176dp"
-        android:layout_centerHorizontal="true"
-        app:srcCompat="@drawable/pedra"
-        />
-    <TextView
-        android:layout_below="@id/PPT2img1"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/PPT2txt1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:layout_marginTop="20dp"
-        android:textSize="50dp"
-        android:fontFamily="@font/freeshipping"
-        android:textColor="@color/black"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="IA:"
-        android:layout_below="@id/PPT2txt2"
-        android:textColor="@color/black"
-        android:layout_marginLeft="25dp"
-        android:textSize="30dp"
-        android:layout_marginTop="170dp"
-        android:fontFamily="@font/freeshipping"
-        />
-    <ImageView
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/PPT2img2"
-        android:layout_width="166dp"
-        android:layout_height="176dp"
-        android:layout_below="@+id/PPT2txt1"
-        app:srcCompat="@drawable/pedra"
-        />
-    <TextView
-        android:id="@+id/PPT2txt3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="RESULTADO"
-        android:textColor="@color/black"
-        android:fontFamily="@font/freeshipping"
-        android:textSize="45dp"
-        android:layout_below="@id/PPT2img2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        />
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/v2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VITÓRIAS: 0"
+            android:textSize="50dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/freeshipping"
+            />
+        <TextView
+            android:id="@+id/e2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EMPATES: 0"
+            android:textSize="50dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/freeshipping"
+            />
+        <TextView
+            android:id="@+id/d2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DERROTAS: 0"
+            android:textSize="50dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/freeshipping"
+            />
+
+    </LinearLayout>
+
     <Button
-        android:id="@+id/PPT2btn1"
+        android:id="@+id/MENU"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/p2"
+        android:layout_marginTop="100dp"
         android:text="MENU PRINCIPAL"
         android:backgroundTint="@color/black"
         android:fontFamily="@font/freeshipping"
-        android:textSize="20dp"
-        android:layout_below="@+id/PPT2txt3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_centerInParent="true"
+        android:textSize="30dp"
         />
-
 </RelativeLayout>

@@ -38,6 +38,18 @@
         android:layout_marginTop="100dp"
         android:fontFamily="@font/freeshipping"
         />
+    <Button
+        android:id="@+id/ivMENU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/IDPbtn1"
+        android:text="MENU PRINCIPAL"
+        android:backgroundTint="@color/black"
+        android:textSize="30dp"
+        android:fontFamily="@font/freeshipping"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

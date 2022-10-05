@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class InversorDePalavras extends AppCompatActivity {
-    Button IDPbtn1;
+    Button IDPbtn1, ivMENU;
     EditText IDPed1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +18,16 @@ public class InversorDePalavras extends AppCompatActivity {
         setContentView(R.layout.activity_inversor_de_palavras);
         IDPbtn1 = findViewById(R.id.IDPbtn1);
         IDPed1 = findViewById(R.id.IDPed1);
+        ivMENU = findViewById(R.id.ivMENU);
+
+        ivMENU.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(InversorDePalavras.this, SegundaTela.class);
+                startActivity(i);
+                finish();
+            }
+        });
 
         IDPbtn1.setOnClickListener(new View.OnClickListener() {
             @Override

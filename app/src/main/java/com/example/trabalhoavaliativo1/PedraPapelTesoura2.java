@@ -6,96 +6,27 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.Random;
-
 public class PedraPapelTesoura2 extends AppCompatActivity {
-    ImageView PPT2img1, PPT2img2;
-    TextView PPT2txt3;
-    Button PPT2btn1;
+    Button MENU;
+    TextView v2, e2, d2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pedra_papel_tesoura2);
-        PPT2img1 = findViewById(R.id.PPT2img1);
-        PPT2img2 = findViewById(R.id.PPT2img2);
-        PPT2txt3 = findViewById(R.id.PPT2txt3);
-        PPT2btn1 = findViewById(R.id.PPT2btn1);
+        MENU = findViewById(R.id.MENU);
+        v2 = findViewById(R.id.v2);
+        e2 = findViewById(R.id.e2);
+        d2 = findViewById(R.id.d2);
 
-        Intent receberDados = getIntent();
-        int choice = receberDados.getIntExtra("choice",0);
-        int ia;
-        Random r = new Random();
-        ia = r.nextInt(3);
+        Intent receberdados = getIntent();
 
-        switch (choice){
-            case 1:
-                PPT2img1.setImageResource(R.drawable.pedra);
-                break;
-            case 2:
-                PPT2img1.setImageResource(R.drawable.papel);
-                break;
-            default:
-                PPT2img1.setImageResource(R.drawable.tesoura);
-                break;
-        }
+        v2.setText("VITORIA: " + receberdados.getIntExtra("V",0));
+        e2.setText("EMPATE: " + receberdados.getIntExtra("E",0));
+        d2.setText("DERROTA: " + receberdados.getIntExtra("D",0));
 
-        switch (ia){
-            case 1:
-                PPT2img2.setImageResource(R.drawable.pedra);
-                break;
-            case 2:
-                PPT2img2.setImageResource(R.drawable.papel);
-                break;
-            default:
-                PPT2img2.setImageResource(R.drawable.tesoura);
-                break;
-        }
-
-        if(choice == 1){
-            if(ia == 1){
-                PPT2txt3.setText("EMPATE!");
-            }
-            else{
-                if(ia == 2){
-                    PPT2txt3.setText("PERDEU!");
-                }
-                else{
-                    PPT2txt3.setText("GANHOU!");
-                }
-            }
-        }
-        else{
-            if(choice == 2){
-                if(ia == 1){
-                    PPT2txt3.setText("GANHOU!");
-                }
-                else{
-                    if(ia == 2){
-                        PPT2txt3.setText("EMPATE");
-                    }
-                    else{
-                        PPT2txt3.setText("PERDEU!");
-                    }
-                }
-            }
-            else{
-                if(ia == 1){
-                    PPT2txt3.setText("PERDEU");
-                }
-                else{
-                    if(ia == 2){
-                        PPT2txt3.setText("GANHOU!");
-                    }
-                    else{
-                        PPT2txt3.setText("EMPATE");
-                    }
-                }
-            }
-        }
-        PPT2btn1.setOnClickListener(new View.OnClickListener() {
+        MENU.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(PedraPapelTesoura2.this, SegundaTela.class);

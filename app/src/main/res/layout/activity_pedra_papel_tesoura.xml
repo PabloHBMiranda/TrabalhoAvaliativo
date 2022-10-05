@@ -7,7 +7,7 @@
     tools:context=".PedraPapelTesoura">
 
     <TextView
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:id="@+id/PPTed1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,31 +18,148 @@
         android:fontFamily="@font/freeshipping"
 
         />
-    <ImageView
-        android:layout_below="@id/PPTed1"
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_below="@+id/PPTed1"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/pedra"
+            android:layout_width="111dp"
+            android:layout_height="156dp"
+            android:layout_marginRight="20dp"
+            app:srcCompat="@drawable/pedra" />
+
+        <ImageView
+            android:id="@+id/papel"
+            android:layout_width="111dp"
+            android:layout_height="156dp"
+            android:layout_marginRight="20dp"
+            app:srcCompat="@drawable/papel" />
+        <ImageView
+            android:id="@+id/tesoura"
+            android:layout_width="111dp"
+            android:layout_height="156dp"
+            app:srcCompat="@drawable/tesoura"
+            />
+        </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layoutResu"
+        android:layout_below="@+id/l1"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/idVC"
+            android:layout_width="81dp"
+            android:layout_height="90dp"
+            />
+
+        <ImageView
+            android:id="@+id/idIA"
+            android:layout_width="81dp"
+            android:layout_height="90dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="250dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" VOCÊ: "
+            android:textSize="27dp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="60dp"
+            android:fontFamily="@font/freeshipping"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="     IA:"
+            android:textSize="30dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="60dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/freeshipping"
+            />
+    </LinearLayout>
+
+    <TextView
         android:layout_marginTop="20dp"
-        android:id="@+id/pedra"
-        android:layout_width="166dp"
-        android:layout_height="176dp"
-        app:srcCompat="@drawable/pedra"
+        android:id="@+id/idResu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutResu"
         android:layout_centerHorizontal="true"
- />
-    <ImageView
+        android:fontFamily="@font/freeshipping"
+        android:text="RESULTADO"
+        android:textColor="@color/black"
+        android:textSize="40dp" />
+
+    <LinearLayout
+        android:id="@+id/PLACAR"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/idResu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/vitoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VITÓRIAS: 0"
+        android:textSize="25dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/freeshipping"
+        />
+        <TextView
+            android:id="@+id/empate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EMPATES: 0"
+            android:textSize="25dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/freeshipping"
+            />
+        <TextView
+            android:id="@+id/derrota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DERROTAS: 0"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/freeshipping"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_below="@+id/PLACAR"
+        android:id="@+id/PPTencerrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/freeshipping"
+        android:text="ENCERRAR"
+        android:textSize="20dp"
         android:layout_marginTop="20dp"
-        android:layout_below="@id/pedra"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/tesoura"
-        android:layout_width="166dp"
-        android:layout_height="176dp"
-        app:srcCompat="@drawable/tesoura"
+        android:layout_marginBottom="30dp"
         />
 
-    <ImageView
-        android:layout_marginTop="20dp"
-        android:id="@+id/papel"
-        android:layout_width="166dp"
-        android:layout_height="176dp"
-        android:layout_below="@id/tesoura"
-        android:layout_centerHorizontal="true"
-        app:srcCompat="@drawable/papel" />
+
+
 </RelativeLayout>
